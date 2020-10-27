@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'principal',
+    loadChildren: () => import('./principal/principal.module').then( m => m.PrincipalPageModule)
+  },
+  {
+    path: 'elijepersonaje',
+    loadChildren: () => import('./elijepersonaje/elijepersonaje.module').then( m => m.ElijepersonajePageModule)
+  },
+  {
+    path: 'menunina',
+    loadChildren: () => import('./menunina/menunina.module').then( m => m.MenuninaPageModule)
+  },
+  {
+    path: 'menunino',
+    loadChildren: () => import('./menunino/menunino.module').then( m => m.MenuninoPageModule)
+  },
 ];
 
 @NgModule({
